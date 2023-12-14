@@ -22,8 +22,7 @@ public:
 
     void put(const string& key, int value) {
         if (!inProgress) {
-            std::cout << "Error: Transaction not in progress" << std::endl;
-            return;
+            throw runtime_error("Error: Transaction not in progress");
         }
         Transaction temp;
         temp.commit = false;
@@ -47,8 +46,7 @@ public:
 
     void commit() {
         if (!inProgress) {
-            std::cout << "Error: No transaction to commit" << std::endl;
-            return;
+            throw runtime_error("Error: No transaction to commit");
         }
 
         for (auto it = data.begin(); it != data.end(); ++it) {
@@ -62,8 +60,7 @@ public:
 
     void rollback() {
         if (!inProgress) {
-            std::cout << "Error: No transaction to rollback" << std::endl;
-            return;
+            throw runtime_error("Error: No transaction to rollback");
         }
         else {
             data = transactionStack.at(transactionStack.size() - 2);
