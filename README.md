@@ -20,3 +20,5 @@ Results will run the commands given in the document and will return what it shou
 
 ## Assignment Modification
 I think the way of turning in the assignment should be improved. This assignment should follow the same format we used for the React or Automated Testing assignment where boilerplate code was given and we filled it in. In this case, we would implement the empty functions and make sure the code in main works. It just gives more structure and the student doesn't have to be worried that their code won't run on the grader's end even if it worked for them.
+
+**For graders, if you would like to test out your own commands , just edit the main. Right now it is just running the commands that were given in Figure 2 of the assignment document**
